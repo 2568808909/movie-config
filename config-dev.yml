@@ -8,3 +8,14 @@ spring:
   redis:
    host: localhost
    port: 6379
+  resources:
+    #add-mappings=true表示如果所有的controller都没有命中，则使用默认的静态资源处理器做匹配
+    add-mappings: true
+  mvc:
+    #接入前端静态资源页面，访问以下形式的路径时按静态资源处理
+    static-path-pattern: /static/**
+    #请求路径没有命中时抛出异常
+    throw-exception-if-no-handler-found: true
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
