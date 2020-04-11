@@ -19,3 +19,5 @@ spring:
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
+image:
+ path: http://picture.movie.com/
